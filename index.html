@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimeTech Solutions | Inovação & Engenharia de Software</title>
+    <meta name="description" content="Desenvolvemos sites, sistemas e soluções digitais para empresas que querem crescer com eficiência, profissionalismo e inovação.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <!-- CSS Principal -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Cabeçalho / Navegação -->
-    <header class="header">
+    <!-- Cabeçalho -->
+    <header class="header" id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="#inicio" class="logo">
                 <div class="logo-symbol">
                     <div class="core"></div>
                 </div>
-                <div>
+                <div class="brand-text">
                     <span class="brand-name">PRIME TECH</span>
                     <span class="brand-sub">Solutions</span>
                 </div>
@@ -29,15 +30,15 @@
             <nav class="nav-menu" id="nav-menu">
                 <a href="#inicio" class="nav-link">Início</a>
                 <a href="#solucoes" class="nav-link">Soluções</a>
+                <a href="#projetos" class="nav-link">Portfólio</a>
                 <a href="#tecnologia" class="nav-link">Tecnologia</a>
-                <a href="#projetos" class="nav-link">Projetos</a>
                 <a href="#seguranca" class="nav-link">Segurança</a>
-                <a href="#sobre" class="nav-link">Sobre nós</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#contato" class="nav-link">Contato</a>
-                <a href="#contato" class="btn-primary mobile-cta">Solicitar orçamento</a>
+                <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="btn-primary mobile-cta">Solicitar Orçamento</a>
             </nav>
 
-            <a href="#contato" class="btn-primary desktop-cta">Solicitar orçamento</a>
+            <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="btn-primary desktop-cta">Solicitar Orçamento</a>
 
             <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
                 <span></span>
@@ -52,155 +53,238 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="pulse-dot"></span> Inovação & Engenharia de Software
+                    <span class="pulse-dot"></span> Engenharia de Software Avançada
                 </div>
-                <h1 class="hero-title">Tecnologia que transforma ideias em <span class="text-gradient">soluções extraordinárias.</span></h1>
-                <p class="hero-subtitle">Desenvolvemos experiências digitais, sistemas inteligentes e soluções tecnológicas para negócios que querem evoluir.</p>
+                <h1 class="hero-title">Tecnologia inteligente para impulsionar <span class="text-gradient">seu negócio.</span></h1>
+                <p class="hero-subtitle">Desenvolvemos sites, sistemas e soluções digitais para empresas que querem crescer com eficiência, profissionalismo e inovação.</p>
                 <div class="hero-buttons">
-                    <a href="#solucoes" class="btn-primary">Conhecer nossas soluções</a>
-                    <a href="#contato" class="btn-secondary">Solicitar um projeto</a>
-                    <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
-                        💬 Falar pelo WhatsApp
-                    </a>
+                    <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="btn-primary">Solicitar Orçamento</a>
+                    <a href="#solucoes" class="btn-secondary">Conhecer Soluções</a>
                 </div>
             </div>
-
             <div class="hero-visual">
-                <div class="tech-perspective-panel">
-                    <div class="panel-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="panel-title">primetech-core-v2.8.sys</span>
-                    </div>
-                    <div class="code-line"><span class="keyword">import</span> { PrimeEngine } <span class="keyword">from</span> <span class="string">'@primetech/core'</span>;</div>
-                    <div class="code-line"><span class="keyword">const</span> system = <span class="keyword">new</span> PrimeEngine({</div>
-                    <div class="code-line" style="padding-left: 15px;">security: <span class="string">'maximum'</span>,</div>
-                    <div class="code-line" style="padding-left: 15px;">latency: <span class="string">'12ms'</span></div>
-                    <div class="code-line">});</div>
-                    <div class="code-line"><span class="keyword">await</span> system.deploy();</div>
-                    <div class="terminal-output">
-                        <div class="output-item success">✓ High-performance architecture loaded.</div>
-                        <div class="output-item info">⚡ Quantum routing enabled.</div>
-                    </div>
-                    <div class="floating-badge badge-1">🚀 Alta Performance</div>
-                    <div class="floating-badge badge-2">🔒 Segurança Avançada</div>
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Ambiente tecnológico e dashboards modernos" fetchpriority="high">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dashboard Demonstrativo -->
-    <section id="tecnologia" class="section-padding" style="background: rgba(255,255,255,0.01);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Monitoramento em Tempo Real</span>
-                <h2 class="section-title">Dashboard Tecnológico Demonstrativo</h2>
-                <p class="section-desc">Painel ilustrativo de controle e métricas de infraestrutura de alto desempenho.</p>
-            </div>
-
-            <div class="dashboard-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">⚡</div>
-                    <div class="metric-info">
-                        <span class="metric-label">Latência Média</span>
-                        <div class="metric-value" id="latency-val">14</div><span class="metric-unit"> ms (Global)</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">🛡️</div>
-                    <div class="metric-info">
-                        <span class="metric-label">Uptime Garantido</span>
-                        <div class="metric-value">99.9</div><span class="metric-unit"> %</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">📊</div>
-                    <div class="metric-info">
-                        <span class="metric-label">Requisições/Seg</span>
-                        <div class="metric-value" id="req-val">4.580</div><span class="metric-unit"> req/s</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">💻</div>
-                    <div class="metric-info">
-                        <span class="metric-label">Sistemas Ativos</span>
-                        <div class="metric-value">128</div><span class="metric-unit"> instâncias</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dashboard-panel">
-                <div class="panel-top">
-                    <h3>Fluxo de Processamento de Dados</h3>
-                    <div class="panel-controls">
-                        <button class="control-btn active" data-period="24h">24h</button>
-                        <button class="control-btn" data-period="7d">7 dias</button>
-                        <button class="control-btn" data-period="30d">30 dias</button>
-                    </div>
-                </div>
-                <div class="chart-bars">
-                    <div class="bar-group"><div class="bar" style="height: 40%;"></div><span>00:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 65%;"></div><span>04:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 30%;"></div><span>08:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 85%;"></div><span>12:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 95%;"></div><span>16:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 70%;"></div><span>20:00</span></div>
-                    <div class="bar-group"><div class="bar" style="height: 50%;"></div><span>24:00</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Soluções -->
+    <!-- Seção de Soluções -->
     <section id="solucoes" class="section-padding">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfólio de Serviços</span>
                 <h2 class="section-title">Soluções Tecnológicas Especializadas</h2>
-                <p class="section-desc">Arquiteturas robustas, desenvolvimento sob medida e infraestrutura escalável para o seu negócio.</p>
+                <p class="section-desc">Entregamos infraestrutura robusta e desenvolvimento de alta performance sob medida.</p>
             </div>
 
             <div class="solutions-grid">
                 <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Desenvolvimento Web & Mobile</h3>
-                    <p>Criação de portais institucionais, PWA e aplicações web responsivas de alta velocidade e SEO otimizado.</p>
-                    <a href="#contato" class="service-link">Saber mais →</a>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Sites profissionais" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Criação de Sites Profissionais</h3>
+                        <p>Websites institucionais responsivos, velozes e otimizados para conversão e SEO.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Criação%20de%20Sites%20Profissionais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Sistemas Sob Medida</h3>
-                    <p>Desenvolvimento de software corporativo, ERPs leves, dashboards de gestão e automação de processos.</p>
-                    <a href="#contato" class="service-link">Saber mais →</a>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1556742049-0a67d553c2a5?auto=format&fit=crop&w=500&q=80" alt="Lojas virtuais" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Lojas Virtuais & Catálogos</h3>
+                        <p>E-commerces seguros com integração de pagamentos e gestão integrada de estoque.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Lojas%20Virtuais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon">🔗</div>
-                    <h3>Integrações & APIs</h3>
-                    <p>Conexão entre plataformas, meios de pagamento, WhatsApp API e banco de dados unificado.</p>
-                    <a href="#contato" class="service-link">Saber mais →</a>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80" alt="Sistemas de gestão" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Sistemas de Gestão & Dashboards</h3>
+                        <p>Softwares personalizados para controle operacional, relatórios e métricas em tempo real.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Sistemas%20de%20Gestão." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon">☁️</div>
-                    <h3>Cloud & Infraestrutura</h3>
-                    <p>Implantação em nuvem, otimização de servidores, arquitetura Serverless e monitoramento contínuo.</p>
-                    <a href="#contato" class="service-link">Saber mais →</a>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Automação de processos" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Automação & Integração de APIs</h3>
+                        <p>Conexão entre sistemas legados, ERPs e ferramentas de atendimento automatizado.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Automação%20e%20APIs." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=500&q=80" alt="Cloud e infraestrutura" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Cloud & Infraestrutura TI</h3>
+                        <p>Consultoria e implantação de servidores em nuvem com alta disponibilidade e escalabilidade.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Cloud%20e%20Infraestrutura." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Segurança digital" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Segurança Digital & Hardening</h3>
+                        <p>Proteção contra vulnerabilidades, conformidade e boas práticas de blindagem de dados.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Segurança%20Digital." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="section-padding" style="background: rgba(255,255,255,0.01);">
+    <!-- Portfólio / Projetos Demonstrativos -->
+    <section id="projetos" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Casos Demonstrativos</span>
+                <h2 class="section-title">Portfólio de Conceitos Visuais</h2>
+                <p class="section-desc">Exemplos práticos de arquitetura e design desenvolvidos por nossa engenharia.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Projeto demonstrativo corporativo" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Conceito Visual</span>
+                        <h3>Portal Corporativo Global</h3>
+                        <p>Estrutura institucional para multinacionais com foco em performance e elegância.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" alt="Projeto fintech demonstrativo" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Projeto Demonstrativo</span>
+                        <h3>Dashboard Fintech & Analytics</h3>
+                        <p>Painel financeiro em tempo real com gráficos interativos e criptografia ponta a ponta.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80" alt="E-commerce demonstrativo" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Conceito Visual</span>
+                        <h3>E-commerce de Alta Conversão</h3>
+                        <p>Loja virtual otimizada para catálogo massivo e carregamento instantâneo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Tecnologia -->
+    <section id="tecnologia" class="section-padding">
+        <div class="container tech-container">
+            <div class="tech-text">
+                <span class="section-tag">Stack Tecnológica</span>
+                <h2 class="section-title">Arquitetura Moderna e Escalável</h2>
+                <p>Nossa equipe utiliza padrões internacionais de desenvolvimento front-end e back-end, garantindo sistemas resilientes, código limpo e total compatibilidade multi-dispositivo.</p>
+                <ul class="tech-list">
+                    <li>✓ Interfaces altamente responsivas (Mobile First)</li>
+                    <li>✓ Integração fluida via REST APIs e Webhooks</li>
+                    <li>✓ Hospedagem otimizada em ambientes Cloud de alta velocidade</li>
+                    <li>✓ Boas práticas de SEO e acessibilidade W3C</li>
+                </ul>
+            </div>
+            <div class="tech-visual">
+                <div class="code-box">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">primetech-core.js</span>
+                    </div>
+                    <pre><code><span class="keyword">class</span> <span class="title">PrimeEngine</span> {
+  <span class="title function_">constructor</span>() {
+    <span class="keyword">this</span>.status = <span class="string">"optimized"</span>;
+    <span class="keyword">this</span>.security = <span class="string">"maximum"</span>;
+  }
+  <span class="title function_">deploy</span>() {
+    <span class="title function_">console</span>.log(<span class="string">"System running at peak performance."</span>);
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segurança Digital -->
+    <section id="seguranca" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Confiabilidade & Proteção</span>
+                <h2 class="section-title">Segurança Digital Rigorosa</h2>
+                <p class="section-desc">Implementamos protocolos avançados para blindar aplicações e proteger os dados estratégicos da sua empresa contra ameaças digitais.</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="sec-icon">🔒</div>
+                    <h3>Criptografia Avançada</h3>
+                    <p>Implementação de certificados SSL/TLS rigorosos e proteção de dados em trânsito e em repouso.</p>
+                </div>
+                <div class="security-card">
+                    <div class="sec-icon">🛡️</div>
+                    <h3>Controle de Acesso</h3>
+                    <p>Políticas estritas de permissão e autenticação para mitigar riscos de invasão e brechas estruturais.</p>
+                </div>
+                <div class="security-card">
+                    <div class="sec-icon">⚙️</div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Monitoramento contínuo de integridade e atualizações regulares de segurança em servidores e códigos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section-padding">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Sobre a PrimeTech</span>
+                <h2 class="section-title">Excelência e Inovação em Software</h2>
+                <p>A <strong>PrimeTech Solutions</strong> atua no desenvolvimento de ferramentas digitais e engenharia de software focada na transformação e eficiência corporativa.</p>
+                <p>Nosso compromisso é entregar soluções de altíssimo nível técnico que unam design sofisticado, robustez de dados e usabilidade impecável para empresas que exigem resultados reais.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Equipe de desenvolvimento trabalhando" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato / Orçamento -->
+    <section id="contato" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Fale Conosco</span>
                 <h2 class="section-title">Inicie o seu Projeto Hoje</h2>
-                <p class="section-desc">Preencha o formulário para receber uma proposta personalizada da nossa equipe técnica.</p>
+                <p class="section-desc">Preencha os campos abaixo para disparar os detalhes diretamente para o nosso atendimento via WhatsApp.</p>
             </div>
 
             <div class="contact-wrapper">
-                <form class="quote-form" id="contactForm">
+                <form class="quote-form" id="whatsappForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nome completo</label>
@@ -214,35 +298,37 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Telefone / WhatsApp</label>
-                            <input type="tel" id="phone" required placeholder="(00) 00000-0000">
+                            <input type="tel" id="phone" required placeholder="(63) 90000-0000">
                         </div>
                         <div class="form-group">
-                            <label for="service">Serviço de interesse</label>
+                            <label for="service">Serviço desejado</label>
                             <select id="service">
-                                <option value="web">Desenvolvimento Web</option>
-                                <option value="system">Sistema Sob Medida</option>
-                                <option value="api">Integração de APIs</option>
-                                <option value="cloud">Cloud / Consultoria</option>
+                                <option value="Criação de Site">Criação de Site Profissional</option>
+                                <option value="Loja Virtual">Loja Virtual / E-commerce</option>
+                                <option value="Sistema de Gestão">Sistema de Gestão / Dashboard</option>
+                                <option value="Automação / API">Automação de Processos / APIs</option>
+                                <option value="Cloud / TI">Cloud & Infraestrutura TI</option>
+                                <option value="Segurança Digital">Segurança Digital</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">Detalhes do projeto</label>
-                        <textarea id="message" rows="4" placeholder="Descreva brevemente seus objetivos..."></textarea>
+                        <label for="message">Descrição do projeto</label>
+                        <textarea id="message" rows="4" required placeholder="Descreva brevemente o seu projeto ou necessidade..."></textarea>
                     </div>
-                    <button type="submit" class="btn-primary">Enviar solicitação</button>
+                    <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Enviar Solicitação via WhatsApp</button>
                 </form>
 
                 <div class="contact-info-box">
-                    <h3>Atendimento Direto</h3>
-                    <p style="color: var(--text-muted); margin-top: 10px;">Prefere conversar imediatamente? Entre em contato via WhatsApp ou e-mail.</p>
+                    <h3>Canais Oficiais</h3>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Prefere contato direto? Utilize nossos canais oficiais abaixo:</p>
                     <div class="info-item">
-                        <strong>WhatsApp Oficial:</strong>
-                        <a href="https://wa.me/5500000000000" target="_blank">+55 (00) 00000-0000</a>
+                        <strong>WhatsApp Comercial:</strong>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20falar%20com%20o%20suporte." target="_blank" rel="noopener">+55 63 99138-6476</a>
                     </div>
                     <div class="info-item">
-                        <strong>E-mail:</strong>
-                        <a href="mailto:contato@primetechsolutions.com">contato@primetechsolutions.com</a>
+                        <strong>E-mail Comercial:</strong>
+                        <a href="mailto:primetech130790@gmail.com">primetech130790@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -252,29 +338,29 @@
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container footer-container">
-            <div>
-                <span class="brand-name">PRIME TECH Solutions</span>
-                <p class="footer-desc">Engenharia de software e soluções digitais de alta performance para empresas em expansão.</p>
+            <div class="footer-col">
+                <span class="brand-name" style="font-size: 1.1rem;">PRIME TECH Solutions</span>
+                <p class="footer-desc">Engenharia de software e soluções digitais corporativas de altíssimo nível.</p>
             </div>
             <div class="footer-col">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#projetos">Portfólio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Legal</h4>
+                <h4>Contato Direto</h4>
                 <ul>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="https://wa.me/5563991386476" target="_blank" rel="noopener">WhatsApp Oficial</a></li>
+                    <li><a href="mailto:primetech130790@gmail.com">primetech130790@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 PrimeTech Solutions. Todos os direitos reservados.</p>
+            <p>© <span id="current-year">2026</span> PrimeTech Solutions. Todos os direitos reservados.</p>
         </div>
     </footer>
 
