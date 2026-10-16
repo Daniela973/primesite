@@ -1,12 +1,22 @@
+/* ==========================================================================
+   PrimeTech Solutions - Estilos Principais
+   Tema: Cyberpunk / Neon Tech / Dark Corporate
+   ========================================================================== */
+
 :root {
-    --bg-deep: #0b0c10;
-    --bg-secondary: #12141a;
-    --cyan-neon: #00ffff;
-    --blue-tech: #00d2ff;
-    --blue-gradient: #3a7bd5;
-    --text-primary: #ffffff;
-    --text-secondary: #a0aec0;
-    --border-color: rgba(0, 255, 255, 0.15);
+    --bg-dark: #0a0e17;
+    --bg-card: #111827;
+    --bg-card-hover: #1f293d;
+    --primary: #00f0ff;
+    --primary-glow: rgba(0, 240, 255, 0.4);
+    --secondary: #7000ff;
+    --secondary-glow: rgba(112, 0, 255, 0.4);
+    --accent: #ff0055;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -21,20 +31,11 @@ html {
 }
 
 body {
-    background-color: var(--bg-deep);
-    color: var(--text-primary);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
     line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
+    overflow-x: hidden;
 }
 
 .container {
@@ -44,78 +45,92 @@ ul {
 }
 
 .section-padding {
-    padding: 100px 0;
+    padding: 80px 0;
+}
+
+/* Tipografia & Utilitários */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--cyan-neon), var(--blue-tech));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.section-tag {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: var(--text-muted);
+}
+
 /* Botões */
-.btn-primary {
-    background: linear-gradient(135deg, var(--blue-tech), var(--blue-gradient));
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+.btn-primary, .btn-secondary, .btn-whatsapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #00a8ff);
+    color: #000;
+    box-shadow: 0 0 15px var(--primary-glow);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 25px var(--primary-glow);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .btn-secondary:hover {
-    border-color: var(--cyan-neon);
-    background: rgba(0, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
 }
 
 .btn-whatsapp {
     background: #25d366;
     color: #fff;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: var(--transition);
 }
 
 .btn-whatsapp:hover {
     background: #20ba5a;
-    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
 }
 
 /* Cabeçalho */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(11, 12, 16, 0.85);
-    
+.header
