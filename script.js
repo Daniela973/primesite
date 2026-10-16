@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // PRIMETECH SOLUTIONS
-    // Menu, serviços, imagens e formulário
+    // Script principal
     // ==========================================
 
-    // MENU MOBILE
+    // 1. MENU MOBILE
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
@@ -21,210 +21,180 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // DEZ SERVIÇOS OFICIAIS
-    // Os arquivos de imagem devem ficar na mesma pasta
-    // do index.html e usar os nomes abaixo.
-
+    // 2. DEZ SERVIÇOS DA PRIMETECH
     const servicos = [
         {
             titulo: 'Desenvolvimento de Sites',
-            imagem: 'servico-01.jpg',
-            descricao: 'Sites modernos, responsivos e profissionais para destacar sua empresa na internet.'
+            descricao: 'Sites modernos, responsivos e profissionais para sua empresa.'
         },
         {
             titulo: 'Landing Pages',
-            imagem: 'servico-02.jpg',
-            descricao: 'Páginas estratégicas para apresentar ofertas, captar contatos e gerar oportunidades.'
+            descricao: 'Páginas estratégicas para divulgar ofertas e conquistar clientes.'
         },
         {
             titulo: 'Lojas Virtuais',
-            imagem: 'servico-03.jpg',
-            descricao: 'Lojas online para apresentar produtos e facilitar as vendas pela internet.'
+            descricao: 'Lojas online profissionais para apresentar produtos e vender pela internet.'
         },
         {
             titulo: 'Cardápios Digitais',
-            imagem: 'servico-04.jpg',
-            descricao: 'Cardápios digitais modernos para restaurantes, lanchonetes e outros negócios.'
+            descricao: 'Cardápios digitais modernos para restaurantes e outros negócios.'
         },
         {
             titulo: 'Sistemas e Aplicações Personalizadas',
-            imagem: 'servico-05.jpg',
-            descricao: 'Soluções digitais desenvolvidas para as necessidades e os processos da sua empresa.'
+            descricao: 'Sistemas desenvolvidos para facilitar a gestão e os processos da sua empresa.'
         },
         {
             titulo: 'Gestão de Instagram',
-            imagem: 'servico-06.jpg',
-            descricao: 'Organização e planejamento de conteúdo para fortalecer a presença da sua marca.'
+            descricao: 'Planejamento e organização de conteúdo para fortalecer sua marca.'
         },
         {
             titulo: 'Gestão de Redes Sociais',
-            imagem: 'servico-07.jpg',
-            descricao: 'Planejamento de publicações para manter sua empresa presente nas redes sociais.'
+            descricao: 'Organização de publicações para manter sua empresa presente nas redes.'
         },
         {
             titulo: 'Design para Redes Sociais',
-            imagem: 'servico-08.jpg',
-            descricao: 'Artes digitais profissionais para divulgar seus produtos, serviços e promoções.'
+            descricao: 'Artes profissionais para divulgar seus serviços, produtos e promoções.'
         },
         {
             titulo: 'Automação e Integrações',
-            imagem: 'servico-09.jpg',
-            descricao: 'Integração de ferramentas e automação de tarefas para otimizar processos.'
+            descricao: 'Automação de tarefas e integração entre ferramentas digitais.'
         },
         {
             titulo: 'Suporte Técnico e Infraestrutura',
-            imagem: 'servico-10.jpg',
-            descricao: 'Suporte em informática, manutenção, redes e infraestrutura de TI.'
+            descricao: 'Suporte em informática, manutenção de computadores, redes e infraestrutura.'
         }
     ];
 
-    // CRIA OS CARTÕES DOS DEZ SERVIÇOS
-    const gradeServicos = document.querySelector(
-        '#solucoes .solutions-grid'
-    );
+    // 3. APROVEITA AS IMAGENS QUE JÁ ESTÃO NO HTML
+    const grade = document.querySelector('#solucoes .solutions-grid');
 
-    if (gradeServicos) {
-        gradeServicos.replaceChildren();
+    if (grade) {
+        const cartoes = Array.from(
+            grade.querySelectorAll('.service-card')
+        );
 
-        servicos.forEach((servico, indice) => {
-            const card = document.createElement('article');
-            card.className = 'service-card';
+        cartoes.forEach((cartao, indice) => {
+            if (indice >= servicos.length) {
+                cartao.remove();
+                return;
+            }
 
-            const areaImagem = document.createElement('div');
-            areaImagem.className = 'service-img';
+            const servico = servicos[indice];
+            const titulo = cartao.querySelector('h3');
+            const descricao = cartao.querySelector('p');
 
-            const img = document.createElement('img');
-            img.src = servico.imagem;
-            img.alt = servico.titulo;
-            img.loading = indice < 3 ? 'eager' : 'lazy';
-            img.decoding = 'async';
+            if (titulo) {
+                titulo.textContent = servico.titulo;
+            }
 
-            // Alternativa visual caso o arquivo não seja encontrado
-            img.addEventListener('error', () => {
-                img.remove();
+            if (descricao) {
+                descricao.textContent = servico.descricao;
+            }
 
-                if (!areaImagem.querySelector('.image-fallback')) {
-                    const fallback = document.createElement('div');
-                    fallback.className = 'image-fallback';
-                    fallback.textContent = servico.titulo;
+            // Mantém o endereço original da imagem no HTML.
+            // Não renomeia nem troca os arquivos de imagem.
 
-                    Object.assign(fallback.style, {
-                        width: '100%',
-                        height: '100%',
-                        minHeight: '200px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center',
-                        padding: '20px',
-                        color: '#00ffff',
-                        fontWeight: '600',
-                        background:
-                            'radial-gradient(circle at center, #172c38, #0b0c10)'
-                    });
+            let link = cartao.querySelector('.service-link');
 
-                    areaImagem.appendChild(fallback);
-                }
-            });
+            if (!link) {
+                link = document.createElement('a');
+                link.className = 'service-link';
+                cartao.querySelector('.service-body')?.appendChild(link);
+            }
 
-            areaImagem.appendChild(img);
-
-            const corpo = document.createElement('div');
-            corpo.className = 'service-body';
-
-            const titulo = document.createElement('h3');
-            titulo.textContent = servico.titulo;
-
-            const descricao = document.createElement('p');
-            descricao.textContent = servico.descricao;
-
-            const link = document.createElement('a');
-            link.className = 'service-link';
-            link.href = '#contato';
-            link.textContent = 'Solicitar orçamento →';
-
-            corpo.append(titulo, descricao, link);
-            card.append(areaImagem, corpo);
-            gradeServicos.appendChild(card);
+            if (link) {
+                link.href = '#contato';
+                link.textContent = 'Solicitar orçamento →';
+            }
         });
-    }
 
-    // ATUALIZA O TÍTULO DA SEÇÃO
-    const secaoSolucoes = document.getElementById('solucoes');
-
-    if (secaoSolucoes) {
-        const tituloSecao = secaoSolucoes.querySelector('.section-title');
+        // Atualiza o título da seção sem alterar o restante.
+        const tituloSecao = document.querySelector(
+            '#solucoes .section-title'
+        );
 
         if (tituloSecao) {
             tituloSecao.textContent = 'Nossas 10 Soluções Profissionais';
         }
     }
 
-    // ATUALIZA AS OPÇÕES DO FORMULÁRIO
-    const seletorServico = document.getElementById('service');
+    // 4. ATUALIZA AS OPÇÕES DO FORMULÁRIO
+    const seletor = document.getElementById('service');
 
-    if (seletorServico) {
-        const valorAnterior = seletorServico.value;
+    if (seletor) {
+        const valorAnterior = seletor.value;
 
-        seletorServico.replaceChildren();
+        seletor.replaceChildren();
 
-        const opcaoInicial = document.createElement('option');
-        opcaoInicial.value = '';
-        opcaoInicial.textContent = 'Selecione um serviço';
-        opcaoInicial.disabled = true;
-        opcaoInicial.selected = true;
-        seletorServico.appendChild(opcaoInicial);
+        const inicial = document.createElement('option');
+        inicial.value = '';
+        inicial.textContent = 'Selecione um serviço';
+        inicial.disabled = true;
+        inicial.selected = true;
+        seletor.appendChild(inicial);
 
         servicos.forEach(servico => {
             const opcao = document.createElement('option');
             opcao.value = servico.titulo;
             opcao.textContent = servico.titulo;
-            seletorServico.appendChild(opcao);
+            seletor.appendChild(opcao);
         });
 
-        if (servicos.some(s => s.titulo === valorAnterior)) {
-            seletorServico.value = valorAnterior;
+        const opcaoAnteriorExiste = servicos.some(
+            servico => servico.titulo === valorAnterior
+        );
+
+        if (opcaoAnteriorExiste) {
+            seletor.value = valorAnterior;
         }
     }
 
-    // FORMULÁRIO PARA WHATSAPP
-    const whatsappForm = document.getElementById('whatsappForm');
+    // 5. FORMULÁRIO DE ORÇAMENTO PELO WHATSAPP
+    const formulario = document.getElementById('whatsappForm');
 
-    if (whatsappForm) {
-        whatsappForm.addEventListener('submit', event => {
+    if (formulario) {
+        formulario.addEventListener('submit', event => {
             event.preventDefault();
 
-            const name = document.getElementById('name')?.value.trim() || '';
-            const email = document.getElementById('email')?.value.trim() || '';
-            const phone = document.getElementById('phone')?.value.trim() || '';
-            const service = document.getElementById('service')?.value || '';
-            const message = document.getElementById('message')?.value.trim() || '';
+            const campoNome = document.getElementById('name');
+            const campoEmail = document.getElementById('email');
+            const campoTelefone = document.getElementById('phone');
+            const campoServico = document.getElementById('service');
+            const campoMensagem = document.getElementById('message');
 
-            if (!name || !phone || !service || !message) {
-                alert('Preencha os campos obrigatórios antes de continuar.');
+            const nome = campoNome?.value.trim() || '';
+            const email = campoEmail?.value.trim() || '';
+            const telefone = campoTelefone?.value.trim() || '';
+            const servico = campoServico?.value || '';
+            const mensagem = campoMensagem?.value.trim() || '';
+
+            if (!nome || !telefone || !servico || !mensagem) {
+                alert(
+                    'Preencha seu nome, telefone, serviço desejado e detalhes do projeto.'
+                );
                 return;
             }
 
-            const targetNumber = '5563991386476';
+            const numeroWhatsApp = '5563991386476';
 
-            const text =
-                `Olá, meu nome é *${name}*.\n` +
+            const texto =
+                `Olá! Meu nome é ${nome}.\n` +
                 `E-mail: ${email}\n` +
-                `Telefone: ${phone}\n\n` +
-                `Tenho interesse em: *${service}*.\n\n` +
-                `Detalhes do projeto:\n${message}`;
+                `Telefone: ${telefone}\n\n` +
+                `Serviço desejado: ${servico}\n\n` +
+                `Detalhes do projeto:\n${mensagem}`;
 
-            const whatsappUrl =
-                `https://wa.me/${targetNumber}?text=${encodeURIComponent(text)}`;
+            const url =
+                `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
 
-            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            window.open(url, '_blank', 'noopener,noreferrer');
         });
     }
 
-    // ANO AUTOMÁTICO NO RODAPÉ
-    const yearSpan = document.getElementById('current-year');
+    // 6. ANO AUTOMÁTICO NO RODAPÉ
+    const ano = document.getElementById('current-year');
 
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+    if (ano) {
+        ano.textContent = new Date().getFullYear();
     }
 });
