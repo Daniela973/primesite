@@ -30,9 +30,7 @@
             <nav class="nav-menu" id="nav-menu">
                 <a href="#inicio" class="nav-link">Início</a>
                 <a href="#solucoes" class="nav-link">Soluções</a>
-                <a href="#projetos" class="nav-link">Portfólio</a>
                 <a href="#tecnologia" class="nav-link">Tecnologia</a>
-                <a href="#seguranca" class="nav-link">Segurança</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#contato" class="nav-link">Contato</a>
                 <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="btn-primary mobile-cta">Solicitar Orçamento</a>
@@ -48,7 +46,7 @@
         </div>
     </header>
 
-    <!-- Hero Section com Globo Holográfico e Lançamento de Foguetes -->
+    <!-- Hero Section com Globo 3D e Lançamento de Foguetes -->
     <section id="inicio" class="hero-section">
         <div class="container hero-container">
             <div class="hero-content">
@@ -96,10 +94,10 @@
                             </linearGradient>
                         </defs>
 
-                        <!-- Glow de Fundo do Globo -->
+                        <!-- Glow do Globo -->
                         <circle cx="250" cy="250" r="180" fill="url(#globeGlow)" />
                         
-                        <!-- Anéis e Latitude/Longitude Holográficas -->
+                        <!-- Malha do Globo Holográfico -->
                         <g class="globe-grid">
                             <circle cx="250" cy="250" r="160" class="globe-wireframe" />
                             <ellipse cx="250" cy="250" rx="160" ry="50" class="globe-wireframe" />
@@ -110,22 +108,10 @@
                             <line x1="250" y1="90" x2="250" y2="410" class="globe-wireframe-axis" />
                         </g>
 
-                        <!-- Anéis de Órbita Externos -->
                         <ellipse cx="250" cy="250" rx="210" ry="70" class="orbit-ring ring-1" />
                         <ellipse cx="250" cy="250" rx="190" ry="85" class="orbit-ring ring-2" />
 
-                        <!-- Pontos Luminosos da Rede Cyber -->
-                        <g class="tech-nodes">
-                            <circle cx="210" cy="180" r="3" class="node-dot" />
-                            <circle cx="290" cy="210" r="4" class="node-dot" />
-                            <circle cx="180" cy="280" r="3" class="node-dot" />
-                            <circle cx="320" cy="290" r="4" class="node-dot" />
-                            <circle cx="250" cy="130" r="3" class="node-dot" />
-                        </g>
-
-                        <!-- TRAJETÓRIAS E FOGUETES COLORIDOS -->
-                        
-                        <!-- Foguete 1: Amarelo -->
+                        <!-- Foguetes saindo em sequência -->
                         <g class="rocket-launch launch-1">
                             <path d="M 210 260 Q 180 150 130 40" class="rocket-trail trail-yellow" />
                             <g class="rocket-group" transform="translate(130, 40) rotate(-25)">
@@ -134,7 +120,6 @@
                             </g>
                         </g>
 
-                        <!-- Foguete 2: Vermelho -->
                         <g class="rocket-launch launch-2">
                             <path d="M 270 240 Q 320 140 370 30" class="rocket-trail trail-red" />
                             <g class="rocket-group" transform="translate(370, 30) rotate(25)">
@@ -143,7 +128,6 @@
                             </g>
                         </g>
 
-                        <!-- Foguete 3: Rosa Neon -->
                         <g class="rocket-launch launch-3">
                             <path d="M 230 220 Q 210 110 210 10" class="rocket-trail trail-pink" />
                             <g class="rocket-group" transform="translate(210, 10) rotate(-5)">
@@ -152,7 +136,6 @@
                             </g>
                         </g>
 
-                        <!-- Foguete 4: Violeta -->
                         <g class="rocket-launch launch-4">
                             <path d="M 290 270 Q 370 200 440 100" class="rocket-trail trail-violet" />
                             <g class="rocket-group" transform="translate(440, 100) rotate(40)">
@@ -161,7 +144,6 @@
                             </g>
                         </g>
 
-                        <!-- Foguete 5: Ciano / Grafite -->
                         <g class="rocket-launch launch-5">
                             <path d="M 190 230 Q 110 180 50 110" class="rocket-trail trail-cyan" />
                             <g class="rocket-group" transform="translate(50, 110) rotate(-45)">
@@ -175,125 +157,253 @@
         </div>
     </section>
 
-    <!-- Seção de Soluções -->
+    <!-- Catálogo Completo de 20 Serviços da PrimeTech Solutions -->
     <section id="solucoes" class="section-padding">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Portfólio de Serviços</span>
-                <h2 class="section-title">Soluções Tecnológicas Especializadas</h2>
-                <p class="section-desc">Entregamos infraestrutura robusta e desenvolvimento de alta performance sob medida.</p>
+                <span class="section-tag">Catálogo Completo</span>
+                <h2 class="section-title">Nossas 20 Soluções Profissionais</h2>
+                <p class="section-desc">Tecnologia de ponta e sistemas robustos desenvolvidos sob medida para o crescimento do seu negócio.</p>
             </div>
 
             <div class="solutions-grid">
+                <!-- 1. Site Profissional -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/sites.jpg" alt="Criação de Sites Profissionais" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/site-profissional.jpg" alt="Site Profissional" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Criação de Sites Profissionais</h3>
+                        <h3>Site Profissional</h3>
                         <p>Websites institucionais responsivos, velozes e otimizados para conversão e SEO.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Criação%20de%20Sites%20Profissionais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Site%20Profissional." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
+                <!-- 2. Landing Page Profissional -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/lojas.jpg" alt="Lojas Virtuais e Catálogos" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556742049-0a67d553c2a5?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/landing-page.jpg" alt="Landing Page Profissional" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Lojas Virtuais & Catálogos</h3>
-                        <p>E-commerces seguros com integração de pagamentos e gestão integrada de estoque.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Lojas%20Virtuais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                        <h3>Landing Page Profissional</h3>
+                        <p>Páginas de alta conversão focadas em campanhas de tráfego pago e vendas diretas.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Landing%20Page%20Profissional." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
+                <!-- 3. Loja Virtual -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/sistemas.jpg" alt="Sistemas de Gestão" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/loja-virtual.jpg" alt="Loja Virtual" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Sistemas de Gestão & Dashboards</h3>
-                        <p>Softwares personalizados para controle operacional, relatórios e métricas em tempo real.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Sistemas%20de%20Gestão." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                        <h3>Loja Virtual</h3>
+                        <p>E-commerce completo e seguro com meios de pagamento integrados e gestão de produtos.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Loja%20Virtual." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
+                <!-- 4. Catálogo Digital -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/automacao.jpg" alt="Automação e APIs" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/catalogo-digital.jpg" alt="Catálogo Digital" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Automação & Integração de APIs</h3>
-                        <p>Conexão entre sistemas legados, ERPs e ferramentas de atendimento automatizado.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Automação%20e%20APIs." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                        <h3>Catálogo Digital</h3>
+                        <p>Exposição interativa de produtos e serviços para compartilhamento rápido no WhatsApp.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Catálogo%20Digital." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
+                <!-- 5. Cardápio Profissional -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/cloud.jpg" alt="Cloud e Infraestrutura" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/cardapio-digital.jpg" alt="Cardápio Profissional" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Cloud & Infraestrutura TI</h3>
-                        <p>Consultoria e implantação de servidores em nuvem com alta disponibilidade e escalabilidade.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Cloud%20e%20Infraestrutura." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                        <h3>Cardápio Profissional</h3>
+                        <p>Menu digital interativo para restaurantes e lanchonetes com pedidos via WhatsApp.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Cardápio%20Profissional." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
+                <!-- 6. Sistema de Delivery -->
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/images/seguranca.jpg" alt="Segurança Digital" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80';">
+                        <img src="assets/images/sistema-delivery.jpg" alt="Sistema de Delivery" loading="lazy">
                     </div>
                     <div class="service-body">
-                        <h3>Segurança Digital & Hardening</h3>
-                        <p>Proteção contra vulnerabilidades, conformidade e boas práticas de blindagem de dados.</p>
-                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Segurança%20Digital." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfólio / Projetos Demonstrativos -->
-    <section id="projetos" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Casos Demonstrativos</span>
-                <h2 class="section-title">Portfólio de Conceitos Visuais</h2>
-                <p class="section-desc">Exemplos práticos de arquitetura e design desenvolvidos por nossa engenharia.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/projeto1.jpg" alt="Projeto Corporativo Global" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80';">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-badge">Conceito Visual</span>
-                        <h3>Portal Corporativo Global</h3>
-                        <p>Estrutura institucional para multinacionais com foco em performance e elegância.</p>
+                        <h3>Sistema de Delivery</h3>
+                        <p>Plataforma completa de pedidos, despacho de entregas e acompanhamento em tempo real.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Sistema%20de%20Delivery." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/projeto2.jpg" alt="Dashboard Fintech Analytics" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80';">
+                <!-- 7. Sistema de Gestão -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/sistema-gestao.jpg" alt="Sistema de Gestão" loading="lazy">
                     </div>
-                    <div class="project-info">
-                        <span class="project-badge">Projeto Demonstrativo</span>
-                        <h3>Dashboard Fintech & Analytics</h3>
-                        <p>Painel financeiro em tempo real com gráficos interativos e criptografia ponta a ponta.</p>
+                    <div class="service-body">
+                        <h3>Sistema de Gestão</h3>
+                        <p>Dashboards financeiros e administrativos para controle total das operações da empresa.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Sistema%20de%20Gestão." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/projeto3.jpg" alt="E-commerce de Alta Conversão" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80';">
+                <!-- 8. Agendamento Online -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/agendamento-online.jpg" alt="Agendamento Online" loading="lazy">
                     </div>
-                    <div class="project-info">
-                        <span class="project-badge">Conceito Visual</span>
-                        <h3>E-commerce de Alta Conversão</h3>
-                        <p>Loja virtual otimizada para catálogo massivo e carregamento instantâneo.</p>
+                    <div class="service-body">
+                        <h3>Agendamento Online</h3>
+                        <p>Sistema automatizado de marcação de horários, consultas e serviços profissionais.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Agendamento%20Online." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 9. Gestão de Clientes (CRM) -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/crm-clientes.jpg" alt="Gestão de Clientes (CRM)" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Gestão de Clientes (CRM)</h3>
+                        <p>Organização de funil de vendas, histórico de atendimento e relacionamento com clientes.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Gestão%20de%20Clientes%20(CRM)." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 10. Controle de Estoque -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/controle-estoque.jpg" alt="Controle de Estoque" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Controle de Estoque</h3>
+                        <p>Gerenciamento preciso de mercadorias, entradas, saídas e alertas de reposição.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Controle%20de%20Estoque." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 11. Desenvolvimento de Aplicativos -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/desenvolvimento-aplicativos.jpg" alt="Desenvolvimento de Aplicativos" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Desenvolvimento de Aplicativos</h3>
+                        <p>Apps mobile nativos e híbridos de alta performance para Android e iOS.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Desenvolvimento%20de%20Aplicativos." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 12. Desenvolvimento de Sistemas Web -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/desenvolvimento-sistemas-web.jpg" alt="Desenvolvimento de Sistemas Web" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Desenvolvimento de Sistemas Web</h3>
+                        <p>Aplicações web sob medida, portais corporativos e softwares em nuvem robustos.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Desenvolvimento%20de%20Sistemas%20Web." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 13. Automação Empresarial -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/automacao-empresarial.jpg" alt="Automação Empresarial" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Automação Empresarial</h3>
+                        <p>Otimização e automatização de fluxos de trabalho e processos internos.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Automação%20Empresarial." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 14. Chatbots e Atendimento Automatizado -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/chatbots-atendimento.jpg" alt="Chatbots e Atendimento Automatizado" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Chatbots & Atendimento Automatizado</h3>
+                        <p>Robôs inteligentes para suporte 24h e qualificação de leads no WhatsApp.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Chatbots%20e%20Atendimento%20Automatizado." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 15. Integrações e APIs -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/integracoes-apis.jpg" alt="Integrações e APIs" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Integrações e APIs</h3>
+                        <p>Conexão segura entre sistemas diferentes, gateways de pagamento e webhooks.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Integrações%20e%20APIs." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 16. Dashboards e Relatórios Inteligentes -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/dashboards-relatorios.jpg" alt="Dashboards e Relatórios Inteligentes" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Dashboards & Relatórios Inteligentes</h3>
+                        <p>Painéis analíticos visuais para tomada de decisões estratégicas baseadas em dados.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Dashboards%20e%20Relatórios%20Inteligentes." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 17. Gestão de Redes Sociais e Campanhas Digitais -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/gestao-redes-sociais.jpg" alt="Gestão de Redes Sociais" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Gestão de Redes Sociais & Campanhas</h3>
+                        <p>Estratégias de posicionamento digital, tráfego pago e engajamento de marca.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Gestão%20de%20Redes%20Sociais%20e%20Campanhas%20Digitais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 18. Identidade Visual e Materiais Digitais -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/identidade-visual.jpg" alt="Identidade Visual e Materiais Digitais" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Identidade Visual & Materiais Digitais</h3>
+                        <p>Criação de logotipos, branding corporativo e peças gráficas de alto padrão.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Identidade%20Visual%20e%20Materiais%20Digitais." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 19. Suporte Técnico e Manutenção de Computadores -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/suporte-tecnico.jpg" alt="Suporte Técnico e Manutenção de Computadores" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Suporte Técnico & Manutenção</h3>
+                        <p>Manutenção preventiva e corretiva de hardware, infraestrutura local e computadores.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Suporte%20Técnico%20e%20Manutenção%20de%20Computadores." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
+                    </div>
+                </div>
+
+                <!-- 20. Testes de Segurança em Sistemas -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/testes-seguranca.jpg" alt="Testes de Segurança em Sistemas" loading="lazy">
+                    </div>
+                    <div class="service-body">
+                        <h3>Testes de Segurança em Sistemas</h3>
+                        <p>Análise de vulnerabilidades, auditoria de código e blindagem contra invasões.</p>
+                        <a href="https://wa.me/5563991386476?text=Olá,%20tenho%20interesse%20em%20Testes%20de%20Segurança%20em%20Sistemas." target="_blank" rel="noopener" class="service-link">Solicitar serviço →</a>
                     </div>
                 </div>
             </div>
@@ -301,17 +411,17 @@
     </section>
 
     <!-- Seção Tecnologia -->
-    <section id="tecnologia" class="section-padding">
+    <section id="tecnologia" class="section-padding bg-alt">
         <div class="container tech-container">
             <div class="tech-text">
                 <span class="section-tag">Stack Tecnológica</span>
                 <h2 class="section-title">Arquitetura Moderna e Escalável</h2>
-                <p>Nossa equipe utiliza padrões internacionais de desenvolvimento front-end e back-end, garantindo sistemas resilientes, código limpo e total compatibilidade multi-dispositivo.</p>
+                <p>Desenvolvemos com padrões de qualidade internacional para garantir velocidade máxima, segurança e total compatibilidade com celulares e computadores.</p>
                 <ul class="tech-list">
-                    <li>✓ Interfaces altamente responsivas (Mobile First)</li>
-                    <li>✓ Integração fluida via REST APIs e Webhooks</li>
-                    <li>✓ Hospedagem otimizada em ambientes Cloud de alta velocidade</li>
-                    <li>✓ Boas práticas de SEO e acessibilidade W3C</li>
+                    <li>✓ Interfaces 100% responsivas</li>
+                    <li>✓ Integração fluida via WhatsApp e APIs</li>
+                    <li>✓ Carregamento ultrarrápido e otimizado</li>
+                    <li>✓ Design exclusivo e personalizado</li>
                 </ul>
             </div>
             <div class="tech-visual">
@@ -336,34 +446,6 @@
         </div>
     </section>
 
-    <!-- Segurança Digital -->
-    <section id="seguranca" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Confiabilidade & Proteção</span>
-                <h2 class="section-title">Segurança Digital Rigorosa</h2>
-                <p class="section-desc">Implementamos protocolos avançados para blindar aplicações e proteger os dados estratégicos da sua empresa contra ameaças digitais.</p>
-            </div>
-            <div class="security-grid">
-                <div class="security-card">
-                    <div class="sec-icon">🔒</div>
-                    <h3>Criptografia Avançada</h3>
-                    <p>Implementação de certificados SSL/TLS rigorosos e proteção de dados em trânsito e em repouso.</p>
-                </div>
-                <div class="security-card">
-                    <div class="sec-icon">🛡️</div>
-                    <h3>Controle de Acesso</h3>
-                    <p>Políticas estritas de permissão e autenticação para mitigar riscos de invasão e brechas estruturais.</p>
-                </div>
-                <div class="security-card">
-                    <div class="sec-icon">⚙️</div>
-                    <h3>Manutenção Preventiva</h3>
-                    <p>Monitoramento contínuo de integridade e atualizações regulares de segurança em servidores e códigos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Sobre -->
     <section id="sobre" class="section-padding">
         <div class="container about-container">
@@ -372,9 +454,6 @@
                 <h2 class="section-title">Excelência e Inovação em Software</h2>
                 <p>A <strong>PrimeTech Solutions</strong> atua no desenvolvimento de ferramentas digitais e engenharia de software focada na transformação e eficiência corporativa.</p>
                 <p>Nosso compromisso é entregar soluções de altíssimo nível técnico que unam design sofisticado, robustez de dados e usabilidade impecável para empresas que exigem resultados reais.</p>
-            </div>
-            <div class="about-image">
-                <img src="assets/images/sobre.jpg" alt="Equipe PrimeTech Solutions" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80';">
             </div>
         </div>
     </section>
@@ -385,7 +464,7 @@
             <div class="section-header">
                 <span class="section-tag">Fale Conosco</span>
                 <h2 class="section-title">Inicie o seu Projeto Hoje</h2>
-                <p class="section-desc">Preencha os campos abaixo para disparar os detalhes diretamente para o nosso atendimento via WhatsApp.</p>
+                <p class="section-desc">Preencha os campos abaixo para enviar os detalhes diretamente para o nosso WhatsApp Comercial.</p>
             </div>
 
             <div class="contact-wrapper">
@@ -408,25 +487,39 @@
                         <div class="form-group">
                             <label for="service">Serviço desejado</label>
                             <select id="service">
-                                <option value="Criação de Site">Criação de Site Profissional</option>
-                                <option value="Loja Virtual">Loja Virtual / E-commerce</option>
-                                <option value="Sistema de Gestão">Sistema de Gestão / Dashboard</option>
-                                <option value="Automação / API">Automação de Processos / APIs</option>
-                                <option value="Cloud / TI">Cloud & Infraestrutura TI</option>
-                                <option value="Segurança Digital">Segurança Digital</option>
+                                <option value="Site Profissional">Site Profissional</option>
+                                <option value="Landing Page Profissional">Landing Page Profissional</option>
+                                <option value="Loja Virtual">Loja Virtual</option>
+                                <option value="Catálogo Digital">Catálogo Digital</option>
+                                <option value="Cardápio Profissional">Cardápio Profissional</option>
+                                <option value="Sistema de Delivery">Sistema de Delivery</option>
+                                <option value="Sistema de Gestão">Sistema de Gestão</option>
+                                <option value="Agendamento Online">Agendamento Online</option>
+                                <option value="Gestão de Clientes (CRM)">Gestão de Clientes (CRM)</option>
+                                <option value="Controle de Estoque">Controle de Estoque</option>
+                                <option value="Desenvolvimento de Aplicativos">Desenvolvimento de Aplicativos</option>
+                                <option value="Desenvolvimento de Sistemas Web">Desenvolvimento de Sistemas Web</option>
+                                <option value="Automação Empresarial">Automação Empresarial</option>
+                                <option value="Chatbots e Atendimento Automatizado">Chatbots e Atendimento Automatizado</option>
+                                <option value="Integrações e APIs">Integrações e APIs</option>
+                                <option value="Dashboards e Relatórios Inteligentes">Dashboards e Relatórios Inteligentes</option>
+                                <option value="Gestão de Redes Sociais e Campanhas Digitais">Gestão de Redes Sociais e Campanhas Digitais</option>
+                                <option value="Identidade Visual e Materiais Digitais">Identidade Visual e Materiais Digitais</option>
+                                <option value="Suporte Técnico e Manutenção de Computadores">Suporte Técnico e Manutenção de Computadores</option>
+                                <option value="Testes de Segurança em Sistemas">Testes de Segurança em Sistemas</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Descrição do projeto</label>
-                        <textarea id="message" rows="4" required placeholder="Descreva brevemente o seu projeto ou necessidade..."></textarea>
+                        <textarea id="message" rows="4" required placeholder="Descreva brevemente o seu projeto..."></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Enviar Solicitação via WhatsApp</button>
                 </form>
 
                 <div class="contact-info-box">
                     <h3>Canais Oficiais</h3>
-                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Prefere contato direto? Utilize nossos canais oficiais abaixo:</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Prefere contato direto? Utilize nossos canais oficiais:</p>
                     <div class="info-item">
                         <strong>WhatsApp Comercial:</strong>
                         <a href="https://wa.me/5563991386476?text=Olá,%20gostaria%20de%20falar%20com%20o%20suporte." target="_blank" rel="noopener">+55 63 99138-6476</a>
@@ -445,4 +538,31 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <span class="brand-name" style="font-size: 1.1rem;">PRIME TECH Solutions</span>
-                <p class="footer-desc">Engenharia de software e soluções digitais corpor
+                <p class="footer-desc">Engenharia de software e soluções digitais corporativas de altíssimo nível.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato Direto</h4>
+                <ul>
+                    <li><a href="https://wa.me/5563991386476" target="_blank" rel="noopener">WhatsApp Oficial</a></li>
+                    <li><a href="mailto:primetech130790@gmail.com">primetech130790@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> PrimeTech Solutions. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
