@@ -48,7 +48,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section com Globo Holográfico e Lançamento de Foguetes -->
     <section id="inicio" class="hero-section">
         <div class="container hero-container">
             <div class="hero-content">
@@ -62,9 +62,114 @@
                     <a href="#solucoes" class="btn-secondary">Conhecer Soluções</a>
                 </div>
             </div>
+
+            <!-- ELEMENTO GRÁFICO PRINCIPAL: GLOBO 3D + FOGUETES -->
             <div class="hero-visual">
-                <div class="hero-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Ambiente tecnológico e dashboards modernos" fetchpriority="high">
+                <div class="globe-stage" id="globeStage">
+                    <svg class="tech-globe-svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <radialGradient id="globeGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#00ffff" stop-opacity="0.3"/>
+                                <stop offset="70%" stop-color="#00d2ff" stop-opacity="0.08"/>
+                                <stop offset="100%" stop-color="#0b0c10" stop-opacity="0"/>
+                            </radialGradient>
+                            
+                            <linearGradient id="rocketGlowYellow" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#ffd700" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#ffd700" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <linearGradient id="rocketGlowRed" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#ff3366" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#ff3366" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <linearGradient id="rocketGlowPink" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#ff00ff" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#ff00ff" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <linearGradient id="rocketGlowCyan" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#00ffff" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#00ffff" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <linearGradient id="rocketGlowViolet" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#9d4edd" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#9d4edd" stop-opacity="0.9"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Glow de Fundo do Globo -->
+                        <circle cx="250" cy="250" r="180" fill="url(#globeGlow)" />
+                        
+                        <!-- Anéis e Latitude/Longitude Holográficas -->
+                        <g class="globe-grid">
+                            <circle cx="250" cy="250" r="160" class="globe-wireframe" />
+                            <ellipse cx="250" cy="250" rx="160" ry="50" class="globe-wireframe" />
+                            <ellipse cx="250" cy="250" rx="160" ry="100" class="globe-wireframe" />
+                            <ellipse cx="250" cy="250" rx="50" ry="160" class="globe-wireframe" />
+                            <ellipse cx="250" cy="250" rx="100" ry="160" class="globe-wireframe" />
+                            <line x1="90" y1="250" x2="410" y2="250" class="globe-wireframe-axis" />
+                            <line x1="250" y1="90" x2="250" y2="410" class="globe-wireframe-axis" />
+                        </g>
+
+                        <!-- Anéis de Órbita Externos -->
+                        <ellipse cx="250" cy="250" rx="210" ry="70" class="orbit-ring ring-1" />
+                        <ellipse cx="250" cy="250" rx="190" ry="85" class="orbit-ring ring-2" />
+
+                        <!-- Pontos Luminosos da Rede Cyber -->
+                        <g class="tech-nodes">
+                            <circle cx="210" cy="180" r="3" class="node-dot" />
+                            <circle cx="290" cy="210" r="4" class="node-dot" />
+                            <circle cx="180" cy="280" r="3" class="node-dot" />
+                            <circle cx="320" cy="290" r="4" class="node-dot" />
+                            <circle cx="250" cy="130" r="3" class="node-dot" />
+                        </g>
+
+                        <!-- TRAJETÓRIAS E FOGUETES COLORIDOS -->
+                        
+                        <!-- Foguete 1: Amarelo -->
+                        <g class="rocket-launch launch-1">
+                            <path d="M 210 260 Q 180 150 130 40" class="rocket-trail trail-yellow" />
+                            <g class="rocket-group" transform="translate(130, 40) rotate(-25)">
+                                <path d="M0 -14 L4 4 L-4 4 Z" fill="#ffd700" />
+                                <rect x="-1.5" y="4" width="3" height="12" fill="url(#rocketGlowYellow)" />
+                            </g>
+                        </g>
+
+                        <!-- Foguete 2: Vermelho -->
+                        <g class="rocket-launch launch-2">
+                            <path d="M 270 240 Q 320 140 370 30" class="rocket-trail trail-red" />
+                            <g class="rocket-group" transform="translate(370, 30) rotate(25)">
+                                <path d="M0 -14 L4 4 L-4 4 Z" fill="#ff3366" />
+                                <rect x="-1.5" y="4" width="3" height="12" fill="url(#rocketGlowRed)" />
+                            </g>
+                        </g>
+
+                        <!-- Foguete 3: Rosa Neon -->
+                        <g class="rocket-launch launch-3">
+                            <path d="M 230 220 Q 210 110 210 10" class="rocket-trail trail-pink" />
+                            <g class="rocket-group" transform="translate(210, 10) rotate(-5)">
+                                <path d="M0 -14 L4 4 L-4 4 Z" fill="#ff00ff" />
+                                <rect x="-1.5" y="4" width="3" height="12" fill="url(#rocketGlowPink)" />
+                            </g>
+                        </g>
+
+                        <!-- Foguete 4: Violeta -->
+                        <g class="rocket-launch launch-4">
+                            <path d="M 290 270 Q 370 200 440 100" class="rocket-trail trail-violet" />
+                            <g class="rocket-group" transform="translate(440, 100) rotate(40)">
+                                <path d="M0 -14 L4 4 L-4 4 Z" fill="#9d4edd" />
+                                <rect x="-1.5" y="4" width="3" height="12" fill="url(#rocketGlowViolet)" />
+                            </g>
+                        </g>
+
+                        <!-- Foguete 5: Ciano / Grafite -->
+                        <g class="rocket-launch launch-5">
+                            <path d="M 190 230 Q 110 180 50 110" class="rocket-trail trail-cyan" />
+                            <g class="rocket-group" transform="translate(50, 110) rotate(-45)">
+                                <path d="M0 -14 L4 4 L-4 4 Z" fill="#00ffff" />
+                                <rect x="-1.5" y="4" width="3" height="12" fill="url(#rocketGlowCyan)" />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -82,7 +187,7 @@
             <div class="solutions-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Sites profissionais" loading="lazy">
+                        <img src="assets/images/sites.jpg" alt="Criação de Sites Profissionais" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Criação de Sites Profissionais</h3>
@@ -93,7 +198,7 @@
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1556742049-0a67d553c2a5?auto=format&fit=crop&w=500&q=80" alt="Lojas virtuais" loading="lazy">
+                        <img src="assets/images/lojas.jpg" alt="Lojas Virtuais e Catálogos" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556742049-0a67d553c2a5?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Lojas Virtuais & Catálogos</h3>
@@ -104,7 +209,7 @@
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80" alt="Sistemas de gestão" loading="lazy">
+                        <img src="assets/images/sistemas.jpg" alt="Sistemas de Gestão" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Sistemas de Gestão & Dashboards</h3>
@@ -115,7 +220,7 @@
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Automação de processos" loading="lazy">
+                        <img src="assets/images/automacao.jpg" alt="Automação e APIs" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Automação & Integração de APIs</h3>
@@ -126,7 +231,7 @@
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=500&q=80" alt="Cloud e infraestrutura" loading="lazy">
+                        <img src="assets/images/cloud.jpg" alt="Cloud e Infraestrutura" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Cloud & Infraestrutura TI</h3>
@@ -137,7 +242,7 @@
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Segurança digital" loading="lazy">
+                        <img src="assets/images/seguranca.jpg" alt="Segurança Digital" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="service-body">
                         <h3>Segurança Digital & Hardening</h3>
@@ -161,7 +266,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Projeto demonstrativo corporativo" loading="lazy">
+                        <img src="assets/images/projeto1.jpg" alt="Projeto Corporativo Global" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="project-info">
                         <span class="project-badge">Conceito Visual</span>
@@ -172,7 +277,7 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" alt="Projeto fintech demonstrativo" loading="lazy">
+                        <img src="assets/images/projeto2.jpg" alt="Dashboard Fintech Analytics" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="project-info">
                         <span class="project-badge">Projeto Demonstrativo</span>
@@ -183,7 +288,7 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80" alt="E-commerce demonstrativo" loading="lazy">
+                        <img src="assets/images/projeto3.jpg" alt="E-commerce de Alta Conversão" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80';">
                     </div>
                     <div class="project-info">
                         <span class="project-badge">Conceito Visual</span>
@@ -269,7 +374,7 @@
                 <p>Nosso compromisso é entregar soluções de altíssimo nível técnico que unam design sofisticado, robustez de dados e usabilidade impecável para empresas que exigem resultados reais.</p>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Equipe de desenvolvimento trabalhando" loading="lazy">
+                <img src="assets/images/sobre.jpg" alt="Equipe PrimeTech Solutions" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80';">
             </div>
         </div>
     </section>
@@ -340,31 +445,4 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <span class="brand-name" style="font-size: 1.1rem;">PRIME TECH Solutions</span>
-                <p class="footer-desc">Engenharia de software e soluções digitais corporativas de altíssimo nível.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#projetos">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contato Direto</h4>
-                <ul>
-                    <li><a href="https://wa.me/5563991386476" target="_blank" rel="noopener">WhatsApp Oficial</a></li>
-                    <li><a href="mailto:primetech130790@gmail.com">primetech130790@gmail.com</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="current-year">2026</span> PrimeTech Solutions. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Script JS -->
-    <script src="script.js"></script>
-</body>
-</html>
+                <p class="footer-desc">Engenharia de software e soluções digitais corpor
